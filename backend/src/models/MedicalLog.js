@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     medicine: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     memo: {
       type: DataTypes.STRING,

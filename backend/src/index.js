@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
-const db = require("./models"); // ← Sequelizeのmodels/index.jsを自動で見る
+const db = require("./models");
+const medicalLogsRouter = require("./routes/medicalLogs"); // ← 追加
 
 app.use(express.json());
+app.use("/.medicalLogs", medicalLogsRouter); // ← 追加
 
 app.get("/", (req, res) => {
   res.send("API起動中！");

@@ -5,7 +5,7 @@ const { MedicalLog } = require("../models");
 // CREATE
 router.post("/", async (req, res) => {
   try {
-    const { date, hospital, fee, medicine } = req.body;
+    const { date, hospital, cost, medicine, memo } = req.body;
     const newLog = await MedicalLog.create({ date, hospital, cost, medicine, memo });
     res.json(newLog);
   } catch (error) {
